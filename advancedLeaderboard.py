@@ -6,8 +6,8 @@ from tabulate import tabulate
 
 
 COOKIES = { 'session': environ['SESSION'] }
-YEAR = 2022
-BOARD = 673955
+YEAR = environ.get('YEAR', 2022)
+BOARD = environ['BOARD']
 URL = f'https://adventofcode.com/{YEAR}/leaderboard/private/view/{BOARD}.json'
 
 
